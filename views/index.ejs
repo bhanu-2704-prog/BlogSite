@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL POSTS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <h2>Welcome to posts page</h2>
+    <form method="get" action="/posts/new">
+        <button>Create a new Post</button>
+    </form>
+    <hr>
+
+    <br /><br />
+    
+    <div class="posts">
+        <% for (post of posts) { %>
+            <div class="post">
+                <i>name: <%= post.name %></i>
+                <br> <br>
+                <b>Title: <%= post.title %></b>
+                <br>
+                <p><%= post.message %></p>
+                <br><br>
+                <form method="GET" action="/posts/<%= post._id %>/edit">
+                    <button>Edit</button>
+                </form>
+
+                <br>
+                <form method="POST" action="/posts/<%= post._id %>/like">
+                    <button type="submit"><i class="fa-regular fa-thumbs-up"> <%= post.likeCount %></i></button>
+                </form>
+
+                <hr>
+
+            </div>
+        <% } %>
+    </div>
+    
+</body>
+</html>
+

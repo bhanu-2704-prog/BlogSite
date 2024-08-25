@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+form textarea {
+    height: 150px;
+    width: 600px;
+    border-radius: 10px;
+    border: 1px solid #d4d4d4;
+}

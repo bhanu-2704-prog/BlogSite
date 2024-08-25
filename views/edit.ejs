@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT PAGE</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+
+    <i>Name: <%= post.name %></i>
+    <br> 
+    <b>Title: <%= post.title %></b>
+    <br> <br>
+
+    <form method="post" action="/posts/<%= post._id %>?_method=PUT">
+        <label>Edit your message:</label> <br><br>
+        <textarea style="height: 150px; width: 600px" name="message"><%= post.message %></textarea>
+        <br>
+        <button style="background-color: rgb(242, 93, 93); color: white">submit</button>
+    </form>
+    
+</body>
+</html>

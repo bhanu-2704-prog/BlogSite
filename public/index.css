@@ -1,0 +1,20 @@
+* {
+    font-family:sans-serif, Arial, Helvetica;
+}
+
+h2 {
+    color: rgb(242, 93, 93);
+    text-align: center;
+}
+
+body form button {
+    height: 30px;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    background-color: rgb(242, 93, 93);
+    color: white;
+}
+
+
